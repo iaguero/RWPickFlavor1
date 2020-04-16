@@ -1,10 +1,7 @@
 #
 #  Be sure to run `pod spec lint RWPickFlavor.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
-#
-#  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
-#  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
-#
+
 
 Pod::Spec.new do |spec|
 
@@ -17,20 +14,9 @@ Pod::Spec.new do |spec|
 
   spec.name         = "RWPickFlavor"
   spec.version      = "0.1.0"
-  spec.summary      = "A short description of RWPickFlavor."
-
-  # This description is used to generate tags and improve search results.
-  #   * Think: What does it do? Why did you write it? What is the focus?
-  #   * Try to keep it short, snappy and to the point.
-  #   * Write the description between the DESC delimiters below.
-  #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
-                   DESC
-
-  spec.homepage     = "http://EXAMPLE/RWPickFlavor"
-  # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
-
-
+  spec.summary      = "RWPickFlavor lets a user select an ice cream flavor"
+  spec.requires_arc = true
+ 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  Licensing your code is important. See https://choosealicense.com for more info.
@@ -38,9 +24,9 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
-  spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
-
+   spec.license      = "MIT (example)"
+   spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+   spec.homepage     = "https://github.com/iaguero/RWPickFlavor1.git"
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -52,26 +38,9 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "" => "" }
-  # Or just: spec.author    = ""
-  # spec.authors            = { "" => "" }
-  # spec.social_media_url   = "https://twitter.com/"
-
-  # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If this Pod runs only on iOS or OS X, then specify the platform and
-  #  the deployment target. You can optionally include the target after the platform.
-  #
-
-   spec.platform     = :ios
-   spec.platform     = :ios, "12.0"
-
-  #  When using multiple platforms
-  # spec.ios.deployment_target = "5.0"
-  # spec.osx.deployment_target = "10.7"
-  # spec.watchos.deployment_target = "2.0"
-  # spec.tvos.deployment_target = "9.0"
-
+  spec.author             = { "Ignacia Aguero" => "igna_aguero@hotmail.com" }
+  
+ 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -91,9 +60,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.source_files  = "RWPickFlavor/**/*.{swift}"
-  spec.exclude_files = "Classes/Exclude"
-
-  # spec.public_header_files = "Classes/**/*.h"
+  
+  
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -104,19 +72,23 @@ Pod::Spec.new do |spec|
   #  non-essential files like tests, examples and documentation.
   #
 
+  
    spec.resources = "RWPickFlavor/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 
-
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+ # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  Link your library with frameworks, or libraries. Libraries do not include
   #  the lib prefix of their name.
   #
 
    spec.frameworks  = "UIKit"
+  
+   spec.osx.deployment_target = "10.14"
+  
+
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-
+  
    spec.dependency "Alamofire", "~> 4.7"
    spec.dependency "MBProgressHUD", "~> 1.1.0"
    spec.swift_version = "4.2"
